@@ -1,5 +1,7 @@
-local TeleportService = game:GetService("TeleportService")
-local gameID = 93637763704200|
+local PlayersToTeleport = game.Players:GetChildren()
 
-local player = game.Players:GetPlayerFromCharacter()
-TeleportService:Teleport(gameID, player)
+for i, Player in pairs(PlayersToTeleport) do
+	if Player:IsA("Player") then
+		TeleportService:Teleport(93637763704200, Player)
+	end
+end
